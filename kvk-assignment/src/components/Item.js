@@ -8,7 +8,6 @@ const Item = ({ company, baseUrl }) => {
       axios
         .get(`${baseUrl}/${id}/details`)
         .then((res) => {
-          console.log("details", res.data.data);
           setDetails(res.data.data[0]);
         })
         .catch((err) => {});
