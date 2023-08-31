@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo } from "react";
 import axios from "axios";
-import throttle from "lodash.throttle";
+import debounce from "lodash.debounce";
 import Item from "./components/Item";
 import Header from "./components/Header";
 
@@ -32,7 +32,7 @@ function App() {
   // Limit hitting the endpoint more than once every 200ms
   const debouncedQuerySetter = useMemo(
     () =>
-      throttle((s) => {
+        debounce((s) => {
         setQuery(s);
       }, 200),
     [],

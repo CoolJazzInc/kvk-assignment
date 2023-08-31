@@ -1,7 +1,6 @@
 {
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "lodash.throttle": "^4.1.1",
     "prettier": "3.0.3",
     "react-test-renderer": "^18.2.0"
   },
